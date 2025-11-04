@@ -1,22 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 320" width="240" height="640" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 420" width="360" height="840" aria-hidden="true">
   <defs>
-    <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0%" stop-color="#fff" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#FF66B3" stop-opacity="1"/>
+    <linearGradient id="bottleGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#FFD6E6"/>
+      <stop offset="35%" stop-color="#FF9AC1"/>
+      <stop offset="100%" stop-color="#FF66B3"/>
     </linearGradient>
-    <filter id="s" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.12"/>
+
+    <linearGradient id="capGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#FFA0CC"/>
+      <stop offset="100%" stop-color="#C74A85"/>
+    </linearGradient>
+
+    <radialGradient id="gloss" cx="30%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity="0.12"/>
     </filter>
   </defs>
 
-  <!-- bottle body -->
-  <g filter="url(#s)">
-    <rect x="18" y="50" rx="26" ry="26" width="84" height="200" fill="#FF9AC1" />
-    <rect x="28" y="60" rx="20" ry="20" width="64" height="180" fill="url(#g1)"/>
+  <!-- soft ground shadow -->
+  <ellipse cx="90" cy="370" rx="52" ry="12" fill="rgba(0,0,0,0.12)"/>
+
+  <g filter="url(#shadow)">
+    <!-- bottle silhouette -->
+    <path d="M56 60
+             C56 44, 64 36, 88 36
+             C112 36, 120 44, 120 60
+             L120 300
+             C120 326, 104 342, 90 342
+             C76 342, 60 326, 60 300
+             L60 120
+             L56 60 Z"
+          fill="url(#bottleGrad)" stroke="#f5c1da" stroke-width="1" />
+
+    <!-- inner highlight panel -->
+    <path d="M72 84
+             C78 64, 102 64, 108 84
+             L108 300
+             C108 320, 96 332, 90 332
+             C84 332, 72 320, 72 300 Z"
+          fill="url(#gloss)" opacity="0.26"/>
+
+    <!-- subtle label band -->
+    <rect x="68" y="220" width="44" height="46" rx="8" fill="#fff" opacity="0.08" />
+    <rect x="70" y="226" width="40" height="30" rx="6" fill="#fff" opacity="0.06" />
+
     <!-- cap -->
-    <rect x="36" y="18" rx="6" ry="6" width="48" height="28" fill="#C74A85" />
-    <rect x="40" y="22" rx="4" ry="4" width="40" height="20" fill="#FF66B3"/>
-    <!-- highlight -->
-    <path d="M46 78 C 58 60, 80 60, 92 78" stroke="#fff" stroke-opacity="0.22" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <rect x="76" y="24" rx="10" ry="10" width="28" height="26" fill="url(#capGrad)" stroke="#e89ab5" stroke-width="1"/>
+    <rect x="74" y="16" rx="12" ry="12" width="32" height="16" fill="#fff" opacity="0.05"/>
+
+    <!-- fine reflections -->
+    <path d="M82 92 C86 80, 98 80, 102 92" stroke="#fff" stroke-opacity="0.18" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M78 140 C82 128, 96 128, 100 140" stroke="#fff" stroke-opacity="0.09" stroke-width="14" fill="none" stroke-linecap="round"/>
   </g>
+
 </svg>
