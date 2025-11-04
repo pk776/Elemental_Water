@@ -6,7 +6,7 @@
      - Screw cap with grooves and carry loop
      - Soft studio shadow on white backdrop
 -->
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="1200" viewBox="0 0 600 1200" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Bubblegum Sprite photo-style bottle">
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="600" viewBox="0 0 600 1200" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Bubblegum Sprite photo-style bottle">
   <defs>
     <!-- Body gradients -->
     <linearGradient id="bodyMain" x1="0" x2="0" y1="0" y2="1">

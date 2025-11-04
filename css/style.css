@@ -115,3 +115,14 @@ input,textarea{padding:10px;border-radius:10px;border:1px solid #e6e6e6}
 	.hero-visual img{height:120px}
 	.why-elemental .cards{grid-template-columns:1fr}
 }
+
+/* Products grid: ensure product preview images are reasonably sized
+   Display the SVGs at ~half their original display width while
+   preserving aspect ratio and centering within the card. */
+.products-grid .product img{
+	width:150px;
+	max-width:100%;
+	height:auto;
+	display:block;
+	margin:0 auto 12px;
+}
