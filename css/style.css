@@ -1,4 +1,70 @@
 :root{
+  --pink:#FF66B3; /* playful */
+  --teal:#00C2C7; /* bright */
+  --yellow:#FFD93D; /* highlight */
+  --purple:#A26BFF; /* accent */
+  --bg:#ffffff;
+  --text:#121212;
+  --muted:#6b6b6b;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{font-family:'Poppins', 'Nunito', system-ui, -apple-system, sans-serif;line-height:1.45;color:var(--text);background:var(--bg);margin:0;-webkit-font-smoothing:antialiased}
+.container{max-width:1100px;margin:0 auto;padding:36px}
+
+/* Header */
+.site-header{background:linear-gradient(90deg,var(--pink) 0%, var(--purple) 45%, var(--teal) 100%);color:#fff}
+.site-header .container{display:flex;align-items:center;justify-content:space-between}
+.logo{height:44px}
+nav a{color:#fff;margin-left:20px;text-decoration:none;font-weight:700;opacity:0.95}
+nav a:hover{opacity:1;text-decoration:underline}
+
+/* Hero */
+.hero{display:flex;align-items:center;gap:28px;padding:48px 0}
+.hero-inner{flex:1}
+.hero h1{font-size:2.5rem;margin:0 0 12px;letter-spacing:-0.5px}
+.lead{color:var(--muted);font-size:1.05rem}
+.hero-ctas .btn{margin-right:10px}
+.hero-visual img{height:220px;transform:rotate(-6deg);filter:drop-shadow(0 12px 24px rgba(0,0,0,0.08))}
+
+/* Buttons */
+.btn{background:var(--purple);color:#fff;border:none;padding:10px 16px;border-radius:12px;cursor:pointer;font-weight:800;display:inline-block;text-decoration:none}
+.btn.ghost{background:transparent;border:2px solid rgba(255,255,255,0.18)}
+.btn:hover{transform:translateY(-4px);box-shadow:0 10px 20px rgba(162,107,255,0.14)}
+
+/* Why Elemental cards */
+.why-elemental{padding:24px 0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.card{background:linear-gradient(180deg,#fff, #fff);border-radius:14px;padding:20px;border:1px solid rgba(0,0,0,0.04);box-shadow:0 8px 20px rgba(14,21,47,0.03)}
+.card h3{margin:0 0 8px}
+.card p{color:var(--muted);margin:0}
+
+/* Testimonials */
+.testimonials{padding:28px 0}
+.testimonial{background:linear-gradient(90deg,var(--yellow),#fff);padding:18px;border-radius:12px;font-style:italic;color:var(--text)}
+.testimonial cite{display:block;margin-top:8px;font-style:normal;font-weight:700;color:var(--muted)}
+
+/* Forms */
+.contact-form{display:grid;gap:8px;max-width:520px}
+label{font-weight:700}
+input,textarea{padding:10px;border-radius:10px;border:1px solid #e6e6e6}
+
+/* Accessibility */
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{left:12px;top:12px;width:auto;height:auto;background:#000;color:#fff;padding:8px 10px;border-radius:6px}
+
+/* Responsive */
+@media (max-width:880px){
+  .container{padding:20px}
+  .hero{flex-direction:column;text-align:center}
+  .hero-visual img{height:160px}
+}
+
+@media (max-width:700px){
+  .cards{grid-template-columns:1fr}
+}
+:root{
 	:root{
 		--pink:#FF66B3; /* playful */
 		--teal:#00C2C7; /* bright */
