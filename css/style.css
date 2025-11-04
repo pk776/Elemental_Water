@@ -1,0 +1,35 @@
+:root{
+	--pink:#FF66B3;
+	--teal:#00C2C7;
+	--yellow:#FFD93D;
+	--purple:#A26BFF;
+	--bg:#ffffff;
+	--text:#111;
+}
+*{box-sizing:border-box}
+body{font-family:system-ui, -apple-system, 'Poppins', 'Nunito', sans-serif;line-height:1.4;color:var(--text);background:var(--bg);margin:0}
+.container{max-width:900px;margin:0 auto;padding:24px}
+.site-header{border-bottom:1px solid #eee;background:linear-gradient(90deg,var(--pink),var(--teal));color:#fff}
+.site-header .container{display:flex;align-items:center;justify-content:space-between}
+.logo{height:40px}
+nav a{color:#fff;margin-left:12px;text-decoration:none;font-weight:600}
+.lead{color:#333;font-size:1.125rem}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:16px}
+.product{border:1px solid #eee;border-radius:10px;padding:12px;text-align:center}
+.product img{height:120px;width:auto}
+.btn{background:var(--purple);color:#fff;border:none;padding:10px 14px;border-radius:8px;cursor:pointer;font-weight:700}
+.btn:hover{transform:translateY(-3px)}
+.site-footer{text-align:center;padding:24px;border-top:1px solid #eee;margin-top:32px}
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{left:8px;top:8px;width:auto;height:auto;background:#000;color:#fff;padding:6px 8px;border-radius:4px}
+.contact-form{display:grid;gap:8px;max-width:480px}
+label{font-weight:600}
+input,textarea{padding:8px;border-radius:6px;border:1px solid #ccc}
+.hidden{display:none}
+
+/* accessibility focus styles */
+:focus{outline:3px solid var(--teal);outline-offset:2px}
+
+@media (prefers-reduced-motion: no-preference){
+	.btn{transition:transform .18s ease, box-shadow .12s ease}
+}
