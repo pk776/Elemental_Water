@@ -1,31 +1,139 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 700" width="300" height="700" role="img" aria-label="Sunburst photo-style bottle">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- yellow_hydroflask.svg
+     Photorealistic-style vector approximation of a matte yellow Hydro-Flask
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="1200" viewBox="0 0 600 1200" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Sunburst photo-style bottle">
   <defs>
-    <linearGradient id="sunGlass" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0%" stop-color="#fff9e6"/>
-      <stop offset="100%" stop-color="#fff0c7"/>
+    <!-- Body gradients (yellow) -->
+    <linearGradient id="bodyMain_yellow" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff7b2"/>
+      <stop offset="0.45" stop-color="#ffe68a"/>
+      <stop offset="1" stop-color="#ffd24d"/>
     </linearGradient>
-    <radialGradient id="sunShine" cx="30%" cy="20%" r="70%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
-      <stop offset="60%" stop-color="#fff1a6" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#ffd93d" stop-opacity="0.12"/>
+
+    <linearGradient id="bodyGloss_yellow" x1="0.35" x2="0.65" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="0.15" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="topCurve_yellow" cx="50%" cy="10%" r="60%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
-    <filter id="sdrop2" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000" flood-opacity="0.12"/>
+
+    <!-- Cap gradient (warm yellow) -->
+    <linearGradient id="capGrad_yellow" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffd976"/>
+      <stop offset="1" stop-color="#f7c73a"/>
+    </linearGradient>
+
+    <!-- Metal rim -->
+    <linearGradient id="metalRim_yellow" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#f2f4f5" stop-opacity="1"/>
+      <stop offset="0.3" stop-color="#d7d9db" stop-opacity="1"/>
+      <stop offset="0.6" stop-color="#f7f8f9" stop-opacity="1"/>
+      <stop offset="1" stop-color="#d1d3d4" stop-opacity="1"/>
+    </linearGradient>
+
+    <!-- Ground shadow -->
+    <radialGradient id="shadowGrad_yellow" cx="50%" cy="30%" r="60%">
+      <stop offset="0" stop-color="#000" stop-opacity="0.18"/>
+      <stop offset="0.6" stop-color="#000" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- micro-texture -->
+    <pattern id="microTexture_yellow" patternUnits="userSpaceOnUse" width="6" height="6">
+      <rect width="6" height="6" fill="transparent"/>
+      <circle cx="1.5" cy="1.5" r="0.5" fill="rgba(255,255,255,0.03)"/>
+    </pattern>
+
+    <!-- inner shadow -->
+    <filter id="innerShadow_yellow" x="-50%" y="-50%" width="200%" height="200%">
+      <feOffset dx="0" dy="6" in="SourceAlpha" result="off"/>
+      <feGaussianBlur in="off" stdDeviation="8" result="blur"/>
+      <feComposite in="blur" in2="SourceAlpha" operator="out" result="comp"/>
+      <feColorMatrix in="comp" type="matrix" values="0 0 0 0 0
+                                                      0 0 0 0 0
+                                                      0 0 0 0 0
+                                                      0 0 0 0.35"/>
+      <feBlend in="SourceGraphic" mode="multiply"/>
     </filter>
+
+    <filter id="softBlur_yellow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+
+    <radialGradient id="vignette_yellow" cx="50%" cy="25%" r="80%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#f6f4f4" stop-opacity="0.035"/>
+    </radialGradient>
   </defs>
 
-  <ellipse cx="150" cy="620" rx="90" ry="20" fill="#000" opacity="0.12"/>
+  <!-- Background (white studio) -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <rect x="0" y="0" width="600" height="1200" fill="url(#vignette_yellow)" />
 
-  <g filter="url(#sdrop2)">
-    <path d="M85 120 C78 180, 82 260, 80 340 C78 420, 95 520, 120 580 C145 640, 155 640, 180 580 C205 520, 222 420, 220 340 C218 260, 222 180, 215 120 Z" fill="url(#sunShine)" stroke="#ffe9a6" stroke-width="2"/>
+  <!-- Ground shadow -->
+  <ellipse cx="300" cy="1050" rx="190" ry="36" fill="url(#shadowGrad_yellow)" />
+
+  <!-- Bottle -->
+  <g id="bottle_yellow">
+    <!-- silhouette -->
+    <path d="M170 220 C170 170 220 120 300 120 C380 120 430 170 430 220 L430 860 C430 920 380 960 300 960 C220 960 170 920 170 860 Z"
+          fill="url(#bodyMain_yellow)" stroke="#ffbb3c" stroke-opacity="0.07" stroke-width="1"/>
+
+    <!-- micro texture -->
+    <path d="M170 220 C170 170 220 120 300 120 C380 120 430 170 430 220 L430 860 C430 920 380 960 300 960 C220 960 170 920 170 860 Z"
+          fill="url(#microTexture_yellow)" opacity="0.20"/>
+
+    <!-- top curvature -->
+    <path d="M210 210 C230 160 270 130 300 130 C330 130 370 160 390 210 L390 230 C370 200 330 180 300 180 C270 180 230 200 210 230 Z"
+          fill="url(#topCurve_yellow)" opacity="0.62"/>
+
+    <!-- vertical gloss -->
+    <path d="M265 210 C290 160 310 140 330 140 C350 140 360 160 375 210 L375 820 C365 840 350 860 300 860 C250 860 235 840 225 820 Z"
+          fill="url(#bodyGloss_yellow)" opacity="0.52" />
+
+    <!-- inner shadow for depth -->
+    <path d="M170 220 C170 170 220 120 300 120 C380 120 430 170 430 220 L430 860 C430 920 380 960 300 960 C220 960 170 920 170 860 Z"
+          fill="none" filter="url(#innerShadow_yellow)"/>
+
+    <!-- stainless rim -->
+    <ellipse cx="300" cy="230" rx="122" ry="18" fill="url(#metalRim_yellow)" stroke="#000" stroke-opacity="0.06" stroke-width="0.6"/>
+    <ellipse cx="300" cy="234" rx="110" ry="10" fill="#d9d9da" opacity="0.92"/>
+    <ellipse cx="300" cy="246" rx="78" ry="6" fill="#000" opacity="0.06"/>
+
+    <!-- cap -->
+    <path d="M210 150 C220 120 260 108 300 108 C340 108 380 120 390 150 L390 200 C370 210 230 210 210 200 Z"
+          fill="url(#capGrad_yellow)" stroke="#df9f2e" stroke-width="0.8"/>
+    <ellipse cx="300" cy="108" rx="90" ry="20" fill="#ffdf80" stroke="#e6b83d" stroke-width="0.5"/>
+    <g opacity="0.06" stroke="#000" stroke-linecap="round" stroke-width="2">
+      <path d="M230 160 C250 148 350 148 370 160" fill="none"/>
+      <path d="M235 150 C255 138 345 138 365 150" fill="none"/>
+    </g>
+
+    <!-- carry loop -->
+    <path d="M372 135 C420 120 470 150 460 190 C455 210 430 220 410 214 C405 212 392 206 374 198 Z"
+          fill="url(#capGrad_yellow)" stroke="#d89b2a" stroke-opacity="0.9" stroke-width="0.9" transform="rotate(-14 400 170) translate(-2,6)"/>
+    <path d="M372 135 C420 120 470 150 460 190 C455 210 430 220 410 214 C405 212 392 206 374 198 Z"
+          fill="#ffffff" opacity="0.03" transform="rotate(-14 400 170) translate(-2,6)"/>
+
+    <!-- small highlight -->
+    <g opacity="0.6" filter="url(#softBlur_yellow)">
+      <path d="M345 200 C350 180 360 170 370 170 C378 170 385 178 387 192 C389 206 380 216 370 220 C360 224 350 224 345 220 Z"
+            fill="#ffffff" opacity="0.88" />
+    </g>
+
+    <!-- bottom foot -->
+    <ellipse cx="300" cy="960" rx="85" ry="20" fill="#000" opacity="0.035"/>
+    <ellipse cx="300" cy="960" rx="62" ry="14" fill="#ffffff" opacity="0.035"/>
   </g>
 
-  <rect x="120" y="56" width="60" height="38" rx="8" fill="#ffb800" stroke="#e6a800" stroke-width="1"/>
-  <rect x="122" y="52" width="56" height="8" rx="6" fill="#fff6da" opacity="0.5"/>
-
-  <path d="M110 160 C130 140, 170 140, 190 160" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.45"/>
-
-  <rect x="110" y="300" width="80" height="120" rx="12" fill="#ffffff" opacity="0.9"/>
-  <text x="150" y="360" font-family="Poppins, sans-serif" font-weight="700" font-size="18" text-anchor="middle" fill="#e6a800">Sunburst</text>
-  <text x="150" y="385" font-family="Nunito, sans-serif" font-size="12" text-anchor="middle" fill="#6b6b6b">Edition</text>
+  <!-- faint reflection on ground -->
+  <g opacity="0.06">
+    <ellipse cx="300" cy="1006" rx="92" ry="20" fill="#ffffff" />
+  </g>
 </svg>

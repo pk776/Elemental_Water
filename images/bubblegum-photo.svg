@@ -217,7 +217,7 @@
 
     <!-- BOTTOM FOOT RING -->
     <ellipse cx="300" cy="960" rx="85" ry="20" fill="#000" opacity="0.035"/>
-    <ellipse cx="300" cy="960" rx="62`" ry="14" fill="#ffffff" opacity="0.035"/>
+  <ellipse cx="300" cy="960" rx="62" ry="14" fill="#ffffff" opacity="0.035"/>
 
     <!-- small specular highlight near top right -->
     <g opacity="0.6" filter="url(#softBlur)">
