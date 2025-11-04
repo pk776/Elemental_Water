@@ -22,6 +22,9 @@ body{font-family:'Poppins', 'Nunito', system-ui, -apple-system, sans-serif;line-
 .site-header{position:sticky;top:0;z-index:60;padding:10px 0;background:linear-gradient(90deg,var(--pink) 0%, var(--purple) 45%, var(--teal) 100%);color:#fff;box-shadow:0 6px 20px rgba(16,24,40,0.06)}
 .site-header .container{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .logo{height:44px}
+/* inline SVG logo sizing */
+.logo-link{display:inline-flex;align-items:center}
+.logo-svg{height:44px;width:auto;display:block}
 /* Gradient text for nav links */
 nav a{margin-left:20px;text-decoration:none;font-weight:700;opacity:0.95;padding:6px 8px;border-radius:8px;display:inline-block}
 /* Gradient text: use -webkit-text-fill-color for broader WebKit support and ensure the element is inline-block */
