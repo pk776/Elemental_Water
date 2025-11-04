@@ -23,9 +23,12 @@ body{font-family:'Poppins', 'Nunito', system-ui, -apple-system, sans-serif;line-
 .site-header .container{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .logo{height:44px}
 /* Gradient text for nav links */
-nav a{margin-left:20px;text-decoration:none;font-weight:700;opacity:0.95;padding:6px 8px;border-radius:8px}
-nav a, .site-header .brand-text{background:linear-gradient(90deg,var(--v-pink),var(--purple),var(--v-teal));-webkit-background-clip:text;background-clip:text;color:transparent}
-nav a:hover{opacity:1;text-decoration:none;background:linear-gradient(90deg,var(--pink),var(--purple),var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent}
+nav a{margin-left:20px;text-decoration:none;font-weight:700;opacity:0.95;padding:6px 8px;border-radius:8px;display:inline-block}
+/* Gradient text: use -webkit-text-fill-color for broader WebKit support and ensure the element is inline-block */
+nav a, .site-header .brand-text{background:linear-gradient(90deg,var(--v-pink),var(--purple),var(--v-teal));background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+nav a:hover{opacity:1;text-decoration:none;background:linear-gradient(90deg,var(--pink),var(--purple),var(--teal));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+/* Make selected text visible against header background */
+nav a::selection, .site-header .brand-text::selection{background:rgba(255,255,255,0.18);color:#fff}
 
 /* Hero */
 .hero{display:flex;align-items:center;gap:28px;padding:36px 0}
