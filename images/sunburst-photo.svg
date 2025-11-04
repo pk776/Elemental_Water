@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 700" width="300" height="700" role="img" aria-label="Sunburst photo-style bottle">
+  <defs>
+    <linearGradient id="sunGlass" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fff9e6"/>
+      <stop offset="100%" stop-color="#fff0c7"/>
+    </linearGradient>
+    <radialGradient id="sunShine" cx="30%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="60%" stop-color="#fff1a6" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ffd93d" stop-opacity="0.12"/>
+    </radialGradient>
+    <filter id="sdrop2" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="150" cy="620" rx="90" ry="20" fill="#000" opacity="0.12"/>
+
+  <g filter="url(#sdrop2)">
+    <path d="M85 120 C78 180, 82 260, 80 340 C78 420, 95 520, 120 580 C145 640, 155 640, 180 580 C205 520, 222 420, 220 340 C218 260, 222 180, 215 120 Z" fill="url(#sunShine)" stroke="#ffe9a6" stroke-width="2"/>
+  </g>
+
+  <rect x="120" y="56" width="60" height="38" rx="8" fill="#ffb800" stroke="#e6a800" stroke-width="1"/>
+  <rect x="122" y="52" width="56" height="8" rx="6" fill="#fff6da" opacity="0.5"/>
+
+  <path d="M110 160 C130 140, 170 140, 190 160" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.45"/>
+
+  <rect x="110" y="300" width="80" height="120" rx="12" fill="#ffffff" opacity="0.9"/>
+  <text x="150" y="360" font-family="Poppins, sans-serif" font-weight="700" font-size="18" text-anchor="middle" fill="#e6a800">Sunburst</text>
+  <text x="150" y="385" font-family="Nunito, sans-serif" font-size="12" text-anchor="middle" fill="#6b6b6b">Edition</text>
+</svg>

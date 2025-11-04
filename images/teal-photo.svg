@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 700" width="300" height="700" role="img" aria-label="Teal Dream photo-style bottle">
+  <defs>
+    <linearGradient id="tealGlass" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#e6fdff"/>
+      <stop offset="100%" stop-color="#c9fbfb"/>
+    </linearGradient>
+    <radialGradient id="tealShine" cx="30%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="60%" stop-color="#9feff0" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#00c2c7" stop-opacity="0.1"/>
+    </radialGradient>
+    <filter id="sdrop" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="150" cy="620" rx="90" ry="20" fill="#000" opacity="0.12"/>
+
+  <g filter="url(#sdrop)">
+    <path d="M85 120 C78 180, 82 260, 80 340 C78 420, 95 520, 120 580 C145 640, 155 640, 180 580 C205 520, 222 420, 220 340 C218 260, 222 180, 215 120 Z" fill="url(#tealShine)" stroke="#bff6f7" stroke-width="2"/>
+  </g>
+
+  <rect x="120" y="56" width="60" height="38" rx="8" fill="#0bb7b5" stroke="#089f9d" stroke-width="1"/>
+  <rect x="122" y="52" width="56" height="8" rx="6" fill="#e8ffff" opacity="0.45"/>
+
+  <path d="M110 160 C130 140, 170 140, 190 160" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.45"/>
+
+  <rect x="110" y="300" width="80" height="120" rx="12" fill="#ffffff" opacity="0.9"/>
+  <text x="150" y="360" font-family="Poppins, sans-serif" font-weight="700" font-size="18" text-anchor="middle" fill="#00a6a4">Teal</text>
+  <text x="150" y="385" font-family="Nunito, sans-serif" font-size="12" text-anchor="middle" fill="#6b6b6b">Dream</text>
+</svg>
