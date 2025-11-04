@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 420" width="360" height="840" aria-hidden="true">
+  <defs>
+    <linearGradient id="bottleGradSun" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#FFF7D6"/>
+      <stop offset="35%" stop-color="#FFE28A"/>
+      <stop offset="100%" stop-color="#FFD93D"/>
+    </linearGradient>
+    <linearGradient id="capGradSun" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#FFE88E"/>
+      <stop offset="100%" stop-color="#E6B800"/>
+    </linearGradient>
+    <radialGradient id="glossSun" cx="30%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadowSun" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="90" cy="370" rx="52" ry="12" fill="rgba(0,0,0,0.12)"/>
+  <g filter="url(#shadowSun)">
+    <path d="M56 60 C56 44, 64 36, 88 36 C112 36, 120 44, 120 60 L120 300 C120 326, 104 342, 90 342 C76 342, 60 326, 60 300 L60 120 L56 60 Z" fill="url(#bottleGradSun)" stroke="#ffeab3" stroke-width="1" />
+    <path d="M72 84 C78 64, 102 64, 108 84 L108 300 C108 320, 96 332, 90 332 C84 332, 72 320, 72 300 Z" fill="url(#glossSun)" opacity="0.26"/>
+    <rect x="68" y="220" width="44" height="46" rx="8" fill="#fff" opacity="0.08" />
+    <rect x="70" y="226" width="40" height="30" rx="6" fill="#fff" opacity="0.06" />
+    <rect x="76" y="24" rx="10" ry="10" width="28" height="26" fill="url(#capGradSun)" stroke="#f5df9a" stroke-width="1"/>
+    <rect x="74" y="16" rx="12" ry="12" width="32" height="16" fill="#fff" opacity="0.05"/>
+    <path d="M82 92 C86 80, 98 80, 102 92" stroke="#fff" stroke-opacity="0.18" stroke-width="6" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>
